@@ -1,1 +1,35 @@
 // Código de Nav acá
+@title-font-size: 30px;
+@fuente-de-letra: 'Russo One', sans-serif;
+@colores: @btn-bg-color;
+
+.navbar {
+    background: rgb(255, 255, 255);
+    width: 100%;
+    
+    .title{
+        padding-top: 15px;
+        font-size: @title-font-size;
+        font-family: @fuente-de-letra;
+        color: @colores;
+        text-align: center;
+    }
+    .list-elements {
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+        margin-bottom: 15px;
+        li{
+            display: inline;
+            margin: auto;
+            list-style: none;
+            a{
+            color: @colores ;
+               outline: none;
+               font-weight: bolder;
+               font-size: 15px;
+               text-decoration: none;
+            }
+        }
+    }
+}

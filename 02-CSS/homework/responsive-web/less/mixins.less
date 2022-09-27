@@ -1,1 +1,21 @@
 // Mixins acá
+.btn-style(@colores:white, @padding:10px, @fontSize: large, @cursorform: pointer,@fontWeight: bold){
+    background: @btn-bg-color;
+    color: white;
+    padding: @padding;
+    border-radius: @padding;
+    width: @button-width;
+    font-size: @fontSize;
+    cursor: @cursorform;
+    font-weight: @fontWeight;
+    
+}
+.btn{
+    .btn-style
+    
+} 
+.btn:hover{
+    color: black;
+    background-color: rgb(136, 141, 223);
+    transition-delay: 100ms;
+}

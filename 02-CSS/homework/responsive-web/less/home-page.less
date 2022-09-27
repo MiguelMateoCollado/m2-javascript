@@ -3,17 +3,17 @@
 .home {
 
   .intro {
-
     h2 {
       padding: 15px;
     }
-
+    img{
+      border-radius: 20px;
+    }
     p {
       padding:0 15px;
     }
 
   }
-
   .music-images {
     display: flex;
     flex-wrap: wrap;
@@ -57,8 +57,7 @@
         margin-bottom: 26px;
       }
 
-      .btn {
-      }
+      
     }
 
     .actual-img {
@@ -72,4 +71,41 @@
       }
     }
   }
+}
+
+@media screen and (max-width: @phone) {
+  
+ .home{ 
+  .music-images{
+  img{
+    width: 100%;
+  }
+.tecnologia {
+  display: none;
+   visibility: hidden;
+ }
+ .ondas{
+   display: none;
+   visibility: hidden;
+ }
+}
+.actual{
+  flex-direction: column-reverse;
+  margin-top: 15px;
+  padding: 0px 15px;
+  align-content: center;
+  .actual-text{
+    width: 100%;
+  }
+ .actual-img{
+ margin: 10px;
+  width: 95%;
+ }
+ .btn{
+  width: 100%;
+  text-align: center;
+ }
+}
+}
+
 }
