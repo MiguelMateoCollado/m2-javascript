@@ -45,7 +45,7 @@ incrementoAsync.addEventListener("click", () =>{
   },'1000')
 })
 incrementoImpar.addEventListener("click", () =>{
-  if (store.getState().contador % 2 === 0) {
+  if ((store.getState().contador % 2 ) !== 0) {
     store.dispatch(incremento())
   }
 })
