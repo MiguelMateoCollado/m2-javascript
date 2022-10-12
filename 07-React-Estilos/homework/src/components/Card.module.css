@@ -1,0 +1,54 @@
+.ciudadNombre {
+    font-size: 35px;
+}
+.container{
+  border-radius: 3%;
+  padding: 2%;
+  display: inline-grid; 
+  grid-template-columns: minmax(150px, auto) minmax(100px, auto); 
+  grid-template-rows: 0.25fr 0.25fr 1fr;
+  gap: 2%;  
+  box-shadow: 0px 0px 8px 7px rgba(211, 45, 44, 0.2);
+}
+.items:nth-child(1) {
+ display: flex;
+ justify-content: flex-end;
+ grid-column-start: 3;
+ grid-column-end: 2;
+}
+.items:nth-child(2){
+   grid-column-start: 1;
+   grid-column-end: 3;
+    
+}
+.items:nth-child(3){
+    display: inline-table;
+    grid-column-start: 1;
+    grid-row-start: 3;
+    margin-top: 10%;
+}
+.items:nth-child(3) p {
+    margin: 0%;
+}
+.temps{
+    font-size: 20px;
+    display: inline-block;
+    justify-content: center;
+    padding-inline: 5px;
+}
+.temp p {
+    margin-right: 5px;
+}
+.items:nth-child(4){
+
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+.boton{
+    border-color: transparent;
+    color: aliceblue;
+    border-radius: 5px;
+    background: #c72646;
+    width: 30px;
+    height: 30px;
+}

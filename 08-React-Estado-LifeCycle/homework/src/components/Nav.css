@@ -1,3 +1,20 @@
 #logoHenry {
   margin-right: 20px;
 }
+.navbar{
+  background: rgb(252, 224, 224);
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.navbar-item{
+  display: flex;
+  justify-content: flex-start;
+}
+.navbar-item img {
+  width: 5%;
+  margin-right: 5px;
+}
+.navbar-item:nth-child(2){
+  display: flex;
+  justify-content: flex-end;
+}

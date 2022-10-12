@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import styles from './App.module.css';
 import Card from './components/Card.jsx';
 import Cards from './components/Cards.jsx';
 import SearchBar from './components/SearchBar.jsx';
@@ -7,7 +7,7 @@ import data, { Cairns } from './data.js';
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.App}>
       <div>
         <Card
           max={Cairns.main.temp_max}

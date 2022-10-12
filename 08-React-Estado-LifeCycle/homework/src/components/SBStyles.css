@@ -1,0 +1,25 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.boton{
+    margin-left: 5px;
+    background: rgb(255, 97, 97);
+    border-radius: 5px;
+    border-color: transparent;
+    color:white
+}
+.boton:hover{
+    background: rgb(227, 75, 75);
+}
+.buscador{
+    background: white;
+    border-radius: 5px;
+    border-color: brown;
+    border-width: 1px;
+    border-style: solid;
+    outline: none;
+}
+.buscador:focus{
+   border-color: coral;
+   border-width: 1px;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { increment, decrement } from '../actions';
-
+console.log(increment)
 class Counter extends Component {
     // Extra Credit
     incrementIfOdd = () => {
