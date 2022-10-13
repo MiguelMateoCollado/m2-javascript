@@ -6,9 +6,9 @@ export const DECREMENT = 'DECREMENT';
 // de manejar ninguna de las lógicas actuales de actualización del store central de Redux.
 // Eso se lo deja al reducer(s).
 export const increment = () => {
-  return console.log("")
+  return {type: INCREMENT}
 };
 
 export const decrement = () => {
-  return {type:INCREMENT}
+  return {type: DECREMENT}
 };

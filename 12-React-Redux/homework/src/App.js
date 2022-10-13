@@ -1,5 +1,4 @@
 import React from "react";
-
 import Favorites from "./components/Favorites/Favorites";
 import Buscador from "./components/Buscador/Buscador";
 import NavBar from "./components/NavBar/NavBar";

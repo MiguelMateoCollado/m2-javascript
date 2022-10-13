@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import { connect } from 'react-redux';
-import { increment, decrement } from '../actions';
-console.log(increment)
+import { bindActionCreators } from "redux";
+import * as actions from '../actions';
+
 class Counter extends Component {
     // Extra Credit
     incrementIfOdd = () => {
@@ -18,10 +19,10 @@ class Counter extends Component {
         return (
             <p>
                 Clickeado: {this.props.count} veces
-                <button onClick={() => {/* Completar */ }}>
+                <button onClick={() => {this.props.increment()}}>
                     + {/* Incremeta */}
                 </button>
-                <button onClick={() => {/* Completar */ }}>
+                <button onClick={() => {this.props.decrement()}}>
                     -  {/* Decrementa */}
                 </button>
                  {/* Si quieres hacer los extra credit puede descomentar las lineas de abajo */}
@@ -35,7 +36,6 @@ class Counter extends Component {
         );
     }
 }
-
 // La función mapStateToProps especifica qué porción del árbol de estados necesita recibir este componente.
 // En este caso, dado que nuestro store de redux sólo almacena el valor del contador,
 // este componente recibe el estado completo.
@@ -46,9 +46,11 @@ const mapStateToProps = (state) => {
         count: state.count
     };
 };
-
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators(actions,dispatch)
+}
 // Se llama a la función de connect para que este componente conozca el resto de la arquitectura de redux.
 // Sin esto, este componente es sólo un componente tonto de React.
 //Pasamos todas las funciones que dependen de Redux, junto con el propio componente,
 // para que Redux se dé a conocer a este componente.
-export default connect(mapStateToProps, { increment, decrement })(Counter);
+export default connect(mapStateToProps,mapDispatchToProps )(Counter);
