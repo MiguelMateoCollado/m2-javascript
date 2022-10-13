@@ -5,31 +5,28 @@ const initialState = {
 };
 
 function rootReducer(state = initialState, action) {
-  if (action.type === "ADD_MOVIE_FAVORITE") {
+  switch (action.type) {
+    case "GET_MOVIES":
+      return {
+        ...state,
+        moviesLoaded: action.payload.Search
+      };
+   case 'GET_MOVIE_DETAIL':
     return {
-      ...state,
-      moviesFavourites: [...state,moviesFavourites, action.movie],
-    };
-  }
-  if (action.type === "GET_MOVIES") {
-    return {
-      ...state,
-      moviesLoaded: action.payload.Search,
-    };
-  }
-  if (action.type === "REMOVE_MOVIES_FAVORITE") {
-    return {
-      ...state,
-      moviesFavourites: state.moviesFavourites.filter((movie) => movie.imdbID !== action.idToDelete)
+      ...state, movieDetail: action.payload
     }
-  }
-  if (action.type === "GET_MOVIES_DETAILS") {
+  case "ADD_FAVORITE":
     return {
-      ...state,
-      movieDetail: state.movies.props
-    }    
+      ...state, moviesFavourites: state.moviesFavourites.concat(action.payload)
+    }
+  case "REMOVE_FAVORITE":
+    return {
+      ...state, moviesFavourites: state.moviesFavourites.filter(movie => movie.imdbID !== action.payload )
+    }
+    default:
+      return {...state}
+   
   }
-  return state;
 }
 
 export default rootReducer;
